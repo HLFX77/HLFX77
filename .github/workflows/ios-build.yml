@@ -15,6 +15,13 @@ jobs:
       - name: Select Xcode
         run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
+      - name: Generate Xcode project
+        run: |
+          if ! command -v xcodegen >/dev/null 2>&1; then
+            brew install xcodegen
+          fi
+          xcodegen generate --spec project.yml
+
       - name: Resolve SPM Packages
         run: |
           xcodebuild -resolvePackageDependencies \
@@ -31,7 +38,7 @@ jobs:
             -destination "platform=iOS Simulator,id=$SIM_ID" \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
-            CODE_SIGN_IDENTITY=""
+            CODE_SIGNING_IDENTITY=""
 
       - name: Build Unsigned Release iOS App & Package IPA
         run: |
