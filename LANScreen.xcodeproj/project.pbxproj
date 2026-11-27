@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BBC48389479E0D06F779132 /* Shared:Sources/Shared/AppConstants.swift */ = {isa = PBXBuildFile; fileRef = 032326976AE66367E93B3ACC /* Shared:Sources/Shared/AppConstants.swift */; };
+		42166ABEA7C1DBA793654C31 /* Shared:Sources/Shared/AppGroupSessionStore.swift */ = {isa = PBXBuildFile; fileRef = 421702CD6F89076B6DA5C70C /* Shared:Sources/Shared/AppGroupSessionStore.swift */; };
+		15CB10F39B21AAD521CCBEBB /* Shared:Sources/Shared/LocalIPAddressDetector.swift */ = {isa = PBXBuildFile; fileRef = 1B7EA6B78C3D9A2C95D94ABD /* Shared:Sources/Shared/LocalIPAddressDetector.swift */; };
+		BD25C09E0EA4026C8CC81284 /* Shared:Sources/Shared/SecurityPairing.swift */ = {isa = PBXBuildFile; fileRef = 4F61A30EE86B91EDF0536274 /* Shared:Sources/Shared/SecurityPairing.swift */; };
+		5D3A16C6664BDF538EAB2682 /* Shared:Sources/Shared/SignalingProtocol.swift */ = {isa = PBXBuildFile; fileRef = F89D56C778DA029E0A31A368 /* Shared:Sources/Shared/SignalingProtocol.swift */; };
+		3286C7D1DF61034FE66BA5F0 /* Shared:Sources/Shared/TLSSignalingTransport.swift */ = {isa = PBXBuildFile; fileRef = 5B3540589FF18145990B4ECA /* Shared:Sources/Shared/TLSSignalingTransport.swift */; };
+		F4DC67EEA30D52C84E148D41 /* Shared:Sources/Shared/VideoFrameProcessor.swift */ = {isa = PBXBuildFile; fileRef = 66773AE3EB29D4E31F52AC7A /* Shared:Sources/Shared/VideoFrameProcessor.swift */; };
+		8861F90D1CFFC4DD1EB8FA7D /* App:Sources/WebRTC/RTCPeerConnection+Async.swift */ = {isa = PBXBuildFile; fileRef = 4A5108DA03961F400F8C8004 /* App:Sources/WebRTC/RTCPeerConnection+Async.swift */; };
+		20BC7F752DCD489A6EE2F35C /* Ext:Sources/WebRTC/RTCPeerConnection+Async.swift */ = {isa = PBXBuildFile; fileRef = 4A5108DA03961F400F8C8004 /* Ext:Sources/WebRTC/RTCPeerConnection+Async.swift */; };
+		F6625E5C7AD29A55E8DF7179 /* App:Sources/WebRTC/WebRTCPeerClient.swift */ = {isa = PBXBuildFile; fileRef = 4CA10E82B57EE1D5071B8332 /* App:Sources/WebRTC/WebRTCPeerClient.swift */; };
+		F765B605503B46B77A1E9DB4 /* Ext:Sources/WebRTC/WebRTCPeerClient.swift */ = {isa = PBXBuildFile; fileRef = 4CA10E82B57EE1D5071B8332 /* Ext:Sources/WebRTC/WebRTCPeerClient.swift */; };
+		7444DAE4412E63D37EC7F2EB /* Ext:Sources/BroadcastExtension/SampleHandler.swift */ = {isa = PBXBuildFile; fileRef = 9D91EB01A893536D7E3EB18F /* Ext:Sources/BroadcastExtension/SampleHandler.swift */; };
+		E1C5F00FBDFA214DE017A470 /* App:Sources/App/Coordinator/AppCoordinator.swift */ = {isa = PBXBuildFile; fileRef = 36E563BB486567462E38402F /* App:Sources/App/Coordinator/AppCoordinator.swift */; };
+		ECB51E95F37F7753B5F6436C /* App:Sources/App/LANScreenApp.swift */ = {isa = PBXBuildFile; fileRef = 34F66656057C834AC08A30D7 /* App:Sources/App/LANScreenApp.swift */; };
+		FE83961992A8295FDD3D4397 /* App:Sources/App/Models/ConnectionModels.swift */ = {isa = PBXBuildFile; fileRef = C5670FB70F2998A90FFA7894 /* App:Sources/App/Models/ConnectionModels.swift */; };
+		D49FE858BB235AAD38E221BE /* App:Sources/App/Permissions/PermissionsManager.swift */ = {isa = PBXBuildFile; fileRef = 85DEEC809528A535057B74AA /* App:Sources/App/Permissions/PermissionsManager.swift */; };
+		2C576688A444B714EE4933E3 /* App:Sources/App/Views/BroadcasterReadyView.swift */ = {isa = PBXBuildFile; fileRef = C3C687D6E4FD34F4D001CFEA /* App:Sources/App/Views/BroadcasterReadyView.swift */; };
+		220D52013B28D318AD5AB319 /* App:Sources/App/Views/Components/RemoteVideoRepresentable.swift */ = {isa = PBXBuildFile; fileRef = 102CD5E59AF5EA0F94752D98 /* App:Sources/App/Views/Components/RemoteVideoRepresentable.swift */; };
+		D83174E627C61B83F4A0BF7D /* App:Sources/App/Views/Components/SystemBroadcastPickerRepresentable.swift */ = {isa = PBXBuildFile; fileRef = 54BBDF7F4E3CAE2842684FC6 /* App:Sources/App/Views/Components/SystemBroadcastPickerRepresentable.swift */; };
+		62B8F10CAAFC76609FF88D61 /* App:Sources/App/Views/DesignSystem.swift */ = {isa = PBXBuildFile; fileRef = 92D580CB111D1CD9203A7F00 /* App:Sources/App/Views/DesignSystem.swift */; };
+		C477C54A45F13CB4F23E2A39 /* App:Sources/App/Views/HomeView.swift */ = {isa = PBXBuildFile; fileRef = 92241D3C18E52D0DA890C169 /* App:Sources/App/Views/HomeView.swift */; };
+		F403C13D9AF32A05D9E9B165 /* App:Sources/App/Views/IncomingRequestSheet.swift */ = {isa = PBXBuildFile; fileRef = 58B25194C943AE6127C98BFC /* App:Sources/App/Views/IncomingRequestSheet.swift */; };
+		8C19463AFDE84776B1F238C5 /* App:Sources/App/Views/RemoteScreenViewerView.swift */ = {isa = PBXBuildFile; fileRef = BD1708BBC6820C1F98A08742 /* App:Sources/App/Views/RemoteScreenViewerView.swift */; };
+		44DC202E852296DDABEE2E70 /* Tests:Tests/LANScreenTests/AppGroupSessionStoreTests.swift */ = {isa = PBXBuildFile; fileRef = D4B4B2EE7851E8D2234FE397 /* Tests:Tests/LANScreenTests/AppGroupSessionStoreTests.swift */; };
+		A75394790254131836356B59 /* Tests:Tests/LANScreenTests/LocalIPAddressDetectorTests.swift */ = {isa = PBXBuildFile; fileRef = ED46E8F9255DB76DE8D1318C /* Tests:Tests/LANScreenTests/LocalIPAddressDetectorTests.swift */; };
+		32A375B9C566C3C4A25AB74C /* Tests:Tests/LANScreenTests/SecurityPairingTests.swift */ = {isa = PBXBuildFile; fileRef = 414C71AB211E67320AEA041F /* Tests:Tests/LANScreenTests/SecurityPairingTests.swift */; };
+		F83804B77A7FE34DEB9300BD /* Tests:Tests/LANScreenTests/SignalingCodecTests.swift */ = {isa = PBXBuildFile; fileRef = 639F6B0BE727050BF8864761 /* Tests:Tests/LANScreenTests/SignalingCodecTests.swift */; };
+		5AE9CC0F4009DA64FE812289 /* Tests:Tests/LANScreenTests/VideoFrameProcessorTests.swift */ = {isa = PBXBuildFile; fileRef = FCBF181E1E7AF87F65DEA5BC /* Tests:Tests/LANScreenTests/VideoFrameProcessorTests.swift */; };
+		7456150DB0CF829094511DC6 /* App:Assets.xcassets */ = {isa = PBXBuildFile; fileRef = B178D12895FC646AF049A3D4 /* App:Assets.xcassets */; };
+		173CE56906A811D62A838313 /* AppFW:LANScreenShared */ = {isa = PBXBuildFile; fileRef = 11FD3579EF8C2F967F854601 /* AppFW:LANScreenShared */; };
+		3FAF6177E77A96901E6A0AD2 /* AppEmbed:LANScreenShared */ = {isa = PBXBuildFile; fileRef = 11FD3579EF8C2F967F854601 /* AppEmbed:LANScreenShared */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); } };
+		FA1602C762BC2EB74DF7204E /* ExtFW:LANScreenShared */ = {isa = PBXBuildFile; fileRef = 11FD3579EF8C2F967F854601 /* ExtFW:LANScreenShared */; };
+		07AB30E7BC82A2D3EFF4B55C /* TestsFW:LANScreenShared */ = {isa = PBXBuildFile; fileRef = 11FD3579EF8C2F967F854601 /* TestsFW:LANScreenShared */; };
+		75B1C1DDED49D32D0D062311 /* AppEmbedExt:LANScreenBroadcastExtension */ = {isa = PBXBuildFile; fileRef = 3179FA9D93EA909E50F5C1B6 /* AppEmbedExt:LANScreenBroadcastExtension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); } };
+		32DE160448042F72566A1B84 /* AppFW:WebRTC */ = {isa = PBXBuildFile; productRef = 51A47F80A9B3C664F2F990C4 /* AppFW:WebRTC */; };
+		44190261B0818BE0731DC842 /* ExtFW:WebRTC */ = {isa = PBXBuildFile; productRef = 3ABB4C348A9BC47B8DACCD07 /* ExtFW:WebRTC */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C64FCF249CE8B535D7C61EC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1845631C2CFEB5E81849F5;
+			remoteInfo = LANScreenShared;
+		};
+		5B808DF87184A11B0F9270A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1845631C2CFEB5E81849F5;
+			remoteInfo = LANScreenShared;
+		};
+		2EC93577570D49C64B5B787F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8DA5ADC82BCC6FA9E1F5F24;
+			remoteInfo = LANScreenBroadcastExtension;
+		};
+		43A0E8A021C1843502214291 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66882CDE4F687DB8B28FB9DD;
+			remoteInfo = LANScreen;
+		};
+		6E5B0EFCBEF6CF519617EE34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF1845631C2CFEB5E81849F5;
+			remoteInfo = LANScreenShared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E8E08E52BF8E709FFF61E8BC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FAF6177E77A96901E6A0AD2 /* LANScreenShared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		190B85BD7A4DB3D24F510BC4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75B1C1DDED49D32D0D062311 /* LANScreenBroadcastExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B14C07FA8FA4242EDC35A115 /* ExportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ExportOptions.plist"; path = "ExportOptions.plist"; sourceTree = "<group>"; };
+		1DE069EEA488454F8BE16673 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "README.md"; path = "README.md"; sourceTree = "<group>"; };
+		B178D12895FC646AF049A3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Assets.xcassets"; path = "Sources/App/Assets.xcassets"; sourceTree = "<group>"; };
+		36E563BB486567462E38402F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppCoordinator.swift"; path = "Sources/App/Coordinator/AppCoordinator.swift"; sourceTree = "<group>"; };
+		5F9D21F26F2BBFA549D567D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Sources/App/Info.plist"; sourceTree = "<group>"; };
+		A917D5B3D975E1CA67CBE66B /* LANScreen.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LANScreen.entitlements"; path = "Sources/App/LANScreen.entitlements"; sourceTree = "<group>"; };
+		34F66656057C834AC08A30D7 /* LANScreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LANScreenApp.swift"; path = "Sources/App/LANScreenApp.swift"; sourceTree = "<group>"; };
+		C5670FB70F2998A90FFA7894 /* ConnectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ConnectionModels.swift"; path = "Sources/App/Models/ConnectionModels.swift"; sourceTree = "<group>"; };
+		85DEEC809528A535057B74AA /* PermissionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PermissionsManager.swift"; path = "Sources/App/Permissions/PermissionsManager.swift"; sourceTree = "<group>"; };
+		C3C687D6E4FD34F4D001CFEA /* BroadcasterReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "BroadcasterReadyView.swift"; path = "Sources/App/Views/BroadcasterReadyView.swift"; sourceTree = "<group>"; };
+		102CD5E59AF5EA0F94752D98 /* RemoteVideoRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RemoteVideoRepresentable.swift"; path = "Sources/App/Views/Components/RemoteVideoRepresentable.swift"; sourceTree = "<group>"; };
+		54BBDF7F4E3CAE2842684FC6 /* SystemBroadcastPickerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SystemBroadcastPickerRepresentable.swift"; path = "Sources/App/Views/Components/SystemBroadcastPickerRepresentable.swift"; sourceTree = "<group>"; };
+		92D580CB111D1CD9203A7F00 /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DesignSystem.swift"; path = "Sources/App/Views/DesignSystem.swift"; sourceTree = "<group>"; };
+		92241D3C18E52D0DA890C169 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "HomeView.swift"; path = "Sources/App/Views/HomeView.swift"; sourceTree = "<group>"; };
+		58B25194C943AE6127C98BFC /* IncomingRequestSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "IncomingRequestSheet.swift"; path = "Sources/App/Views/IncomingRequestSheet.swift"; sourceTree = "<group>"; };
+		BD1708BBC6820C1F98A08742 /* RemoteScreenViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RemoteScreenViewerView.swift"; path = "Sources/App/Views/RemoteScreenViewerView.swift"; sourceTree = "<group>"; };
+		C1322EF8FEF5D13C94E0CDF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Sources/BroadcastExtension/Info.plist"; sourceTree = "<group>"; };
+		BC6E42413D47B2861BC13197 /* LANScreenBroadcastExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LANScreenBroadcastExtension.entitlements"; path = "Sources/BroadcastExtension/LANScreenBroadcastExtension.entitlements"; sourceTree = "<group>"; };
+		9D91EB01A893536D7E3EB18F /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SampleHandler.swift"; path = "Sources/BroadcastExtension/SampleHandler.swift"; sourceTree = "<group>"; };
+		032326976AE66367E93B3ACC /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppConstants.swift"; path = "Sources/Shared/AppConstants.swift"; sourceTree = "<group>"; };
+		421702CD6F89076B6DA5C70C /* AppGroupSessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppGroupSessionStore.swift"; path = "Sources/Shared/AppGroupSessionStore.swift"; sourceTree = "<group>"; };
+		1B7EA6B78C3D9A2C95D94ABD /* LocalIPAddressDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LocalIPAddressDetector.swift"; path = "Sources/Shared/LocalIPAddressDetector.swift"; sourceTree = "<group>"; };
+		4F61A30EE86B91EDF0536274 /* SecurityPairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SecurityPairing.swift"; path = "Sources/Shared/SecurityPairing.swift"; sourceTree = "<group>"; };
+		F89D56C778DA029E0A31A368 /* SignalingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SignalingProtocol.swift"; path = "Sources/Shared/SignalingProtocol.swift"; sourceTree = "<group>"; };
+		5B3540589FF18145990B4ECA /* TLSSignalingTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "TLSSignalingTransport.swift"; path = "Sources/Shared/TLSSignalingTransport.swift"; sourceTree = "<group>"; };
+		66773AE3EB29D4E31F52AC7A /* VideoFrameProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "VideoFrameProcessor.swift"; path = "Sources/Shared/VideoFrameProcessor.swift"; sourceTree = "<group>"; };
+		4A5108DA03961F400F8C8004 /* RTCPeerConnection+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "RTCPeerConnection+Async.swift"; path = "Sources/WebRTC/RTCPeerConnection+Async.swift"; sourceTree = "<group>"; };
+		4CA10E82B57EE1D5071B8332 /* WebRTCPeerClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WebRTCPeerClient.swift"; path = "Sources/WebRTC/WebRTCPeerClient.swift"; sourceTree = "<group>"; };
+		D4B4B2EE7851E8D2234FE397 /* AppGroupSessionStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AppGroupSessionStoreTests.swift"; path = "Tests/LANScreenTests/AppGroupSessionStoreTests.swift"; sourceTree = "<group>"; };
+		ED46E8F9255DB76DE8D1318C /* LocalIPAddressDetectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LocalIPAddressDetectorTests.swift"; path = "Tests/LANScreenTests/LocalIPAddressDetectorTests.swift"; sourceTree = "<group>"; };
+		414C71AB211E67320AEA041F /* SecurityPairingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SecurityPairingTests.swift"; path = "Tests/LANScreenTests/SecurityPairingTests.swift"; sourceTree = "<group>"; };
+		639F6B0BE727050BF8864761 /* SignalingCodecTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SignalingCodecTests.swift"; path = "Tests/LANScreenTests/SignalingCodecTests.swift"; sourceTree = "<group>"; };
+		FCBF181E1E7AF87F65DEA5BC /* VideoFrameProcessorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "VideoFrameProcessorTests.swift"; path = "Tests/LANScreenTests/VideoFrameProcessorTests.swift"; sourceTree = "<group>"; };
+		297DA9AC2894F5AC5058C526 /* project.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = "project.yml"; path = "project.yml"; sourceTree = "<group>"; };
+		14CE7D6BE48EE663B983FFF3 /* LANScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LANScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3179FA9D93EA909E50F5C1B6 /* LANScreenBroadcastExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LANScreenBroadcastExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		11FD3579EF8C2F967F854601 /* LANScreenShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LANScreenShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D791CB5F79B45603B555A3 /* LANScreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LANScreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D88083BD6E6158B71EA04EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD55D12C64BBEE1E2D684B1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA1602C762BC2EB74DF7204E,
+				44190261B0818BE0731DC842,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B8DA9AA4AA8CA652E3473FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				173CE56906A811D62A838313,
+				32DE160448042F72566A1B84,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B6FBB1D95CDF0E47E3BC288 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07AB30E7BC82A2D3EFF4B55C,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		171D6C198AE40ED4A040BB61 /* LANScreen */ = {
+			isa = PBXGroup;
+			children = (
+				297DA9AC2894F5AC5058C526,
+				B14C07FA8FA4242EDC35A115,
+				1DE069EEA488454F8BE16673,
+				03C67AB08DB7C3DE3562796F,
+				6754333BD0BC6FC23CCF2AA8,
+				27376E0C7D98A85EF39644D5,
+			);
+			name = "LANScreen";
+			sourceTree = "<group>";
+		};
+		27376E0C7D98A85EF39644D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14CE7D6BE48EE663B983FFF3,
+				3179FA9D93EA909E50F5C1B6,
+				11FD3579EF8C2F967F854601,
+				B5D791CB5F79B45603B555A3,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		03C67AB08DB7C3DE3562796F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				0AC80366F051D3622055250B,
+				5B31986D4DA3129D5A27BF87,
+				89600F1586D8B75E6BEC7B40,
+				7A9807B74A444314E888FA92,
+			);
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		6754333BD0BC6FC23CCF2AA8 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				92F718560618447F5B0C2B73,
+			);
+			name = "Tests";
+			sourceTree = "<group>";
+		};
+		89600F1586D8B75E6BEC7B40 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				032326976AE66367E93B3ACC,
+				421702CD6F89076B6DA5C70C,
+				1B7EA6B78C3D9A2C95D94ABD,
+				4F61A30EE86B91EDF0536274,
+				F89D56C778DA029E0A31A368,
+				5B3540589FF18145990B4ECA,
+				66773AE3EB29D4E31F52AC7A,
+			);
+			name = "Shared";
+			sourceTree = "<group>";
+		};
+		7A9807B74A444314E888FA92 /* WebRTC */ = {
+			isa = PBXGroup;
+			children = (
+				4A5108DA03961F400F8C8004,
+				4CA10E82B57EE1D5071B8332,
+			);
+			name = "WebRTC";
+			sourceTree = "<group>";
+		};
+		5B31986D4DA3129D5A27BF87 /* BroadcastExtension */ = {
+			isa = PBXGroup;
+			children = (
+				9D91EB01A893536D7E3EB18F,
+				C1322EF8FEF5D13C94E0CDF6,
+				BC6E42413D47B2861BC13197,
+			);
+			name = "BroadcastExtension";
+			sourceTree = "<group>";
+		};
+		0AC80366F051D3622055250B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				36E563BB486567462E38402F,
+				34F66656057C834AC08A30D7,
+				C5670FB70F2998A90FFA7894,
+				85DEEC809528A535057B74AA,
+				C3C687D6E4FD34F4D001CFEA,
+				102CD5E59AF5EA0F94752D98,
+				54BBDF7F4E3CAE2842684FC6,
+				92D580CB111D1CD9203A7F00,
+				92241D3C18E52D0DA890C169,
+				58B25194C943AE6127C98BFC,
+				BD1708BBC6820C1F98A08742,
+				B178D12895FC646AF049A3D4,
+				5F9D21F26F2BBFA549D567D9,
+				A917D5B3D975E1CA67CBE66B,
+			);
+			name = "App";
+			sourceTree = "<group>";
+		};
+		92F718560618447F5B0C2B73 /* LANScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4B4B2EE7851E8D2234FE397,
+				ED46E8F9255DB76DE8D1318C,
+				414C71AB211E67320AEA041F,
+				639F6B0BE727050BF8864761,
+				FCBF181E1E7AF87F65DEA5BC,
+			);
+			name = "LANScreenTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF1845631C2CFEB5E81849F5 /* LANScreenShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B3276A452CCB99CCA87B4B0;
+			buildPhases = (
+				EDD323D75328D6777CF8B157,
+				D88083BD6E6158B71EA04EFF,
+				5CF299C041A52BBAF2E139E2,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LANScreenShared;
+			productName = LANScreenShared;
+			productReference = 11FD3579EF8C2F967F854601;
+			productType = "com.apple.product-type.framework";
+		};
+		A8DA5ADC82BCC6FA9E1F5F24 /* LANScreenBroadcastExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA0A9E66EACAFE536E929D69;
+			buildPhases = (
+				846ED50C3F977EC4BDB6F51E,
+				FD55D12C64BBEE1E2D684B1D,
+				B46AA512EEBB3C2D3F980E7A,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C017FB4C005C070427318533,
+			);
+			name = LANScreenBroadcastExtension;
+			packageProductDependencies = (
+				3ABB4C348A9BC47B8DACCD07,
+			);
+			productName = LANScreenBroadcastExtension;
+			productReference = 3179FA9D93EA909E50F5C1B6;
+			productType = "com.apple.product-type.app-extension";
+		};
+		66882CDE4F687DB8B28FB9DD /* LANScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 553C36434D2A6B733DDF222A;
+			buildPhases = (
+				CDBAA4CFDE304E0C4B3617D7,
+				0B8DA9AA4AA8CA652E3473FA,
+				0C6924F3086872EF42E191E9,
+				E8E08E52BF8E709FFF61E8BC,
+				190B85BD7A4DB3D24F510BC4,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				598FFCC728E21F56432775AD,
+				85F65E2F77A67340B9B0F53D,
+			);
+			name = LANScreen;
+			packageProductDependencies = (
+				51A47F80A9B3C664F2F990C4,
+			);
+			productName = LANScreen;
+			productReference = 14CE7D6BE48EE663B983FFF3;
+			productType = "com.apple.product-type.application";
+		};
+		434D4528FA9B6023808AE91F /* LANScreenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3806F19BDFB234BD1CCE7662;
+			buildPhases = (
+				0DE9884D512CF3241019A15E,
+				1B6FBB1D95CDF0E47E3BC288,
+				8D8A734C83AED8CB6CFEAED1,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8BD6673B9BFAB246EC742B11,
+				00D1764F055BCA1A8B48B8A7,
+			);
+			name = LANScreenTests;
+			productName = LANScreenTests;
+			productReference = B5D791CB5F79B45603B555A3;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BB5E4B0514FD4FDBDE28DB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					66882CDE4F687DB8B28FB9DD = { CreatedOnToolsVersion = 15.4; };
+					A8DA5ADC82BCC6FA9E1F5F24 = { CreatedOnToolsVersion = 15.4; };
+					DF1845631C2CFEB5E81849F5 = { CreatedOnToolsVersion = 15.4; };
+					434D4528FA9B6023808AE91F = { CreatedOnToolsVersion = 15.4; TestTargetID = 66882CDE4F687DB8B28FB9DD; };
+				};
+			};
+			buildConfigurationList = 1B9DAA1375A387B9D21031EF;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = fr;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				fr,
+				en,
+				Base,
+			);
+			mainGroup = 171D6C198AE40ED4A040BB61;
+			packageReferences = (
+				2263059DA38F54B1375A3912 /* XCRemoteSwiftPackageReference "WebRTC" */,
+			);
+			productRefGroup = 27376E0C7D98A85EF39644D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66882CDE4F687DB8B28FB9DD /* LANScreen */,
+				A8DA5ADC82BCC6FA9E1F5F24 /* LANScreenBroadcastExtension */,
+				DF1845631C2CFEB5E81849F5 /* LANScreenShared */,
+				434D4528FA9B6023808AE91F /* LANScreenTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CF299C041A52BBAF2E139E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B46AA512EEBB3C2D3F980E7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C6924F3086872EF42E191E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7456150DB0CF829094511DC6,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8A734C83AED8CB6CFEAED1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EDD323D75328D6777CF8B157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BBC48389479E0D06F779132,
+				42166ABEA7C1DBA793654C31,
+				15CB10F39B21AAD521CCBEBB,
+				BD25C09E0EA4026C8CC81284,
+				5D3A16C6664BDF538EAB2682,
+				3286C7D1DF61034FE66BA5F0,
+				F4DC67EEA30D52C84E148D41,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		846ED50C3F977EC4BDB6F51E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7444DAE4412E63D37EC7F2EB,
+				20BC7F752DCD489A6EE2F35C,
+				F765B605503B46B77A1E9DB4,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDBAA4CFDE304E0C4B3617D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C5F00FBDFA214DE017A470,
+				ECB51E95F37F7753B5F6436C,
+				FE83961992A8295FDD3D4397,
+				D49FE858BB235AAD38E221BE,
+				2C576688A444B714EE4933E3,
+				220D52013B28D318AD5AB319,
+				D83174E627C61B83F4A0BF7D,
+				62B8F10CAAFC76609FF88D61,
+				C477C54A45F13CB4F23E2A39,
+				F403C13D9AF32A05D9E9B165,
+				8C19463AFDE84776B1F238C5,
+				8861F90D1CFFC4DD1EB8FA7D,
+				F6625E5C7AD29A55E8DF7179,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0DE9884D512CF3241019A15E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DC202E852296DDABEE2E70,
+				A75394790254131836356B59,
+				32A375B9C566C3C4A25AB74C,
+				F83804B77A7FE34DEB9300BD,
+				5AE9CC0F4009DA64FE812289,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C017FB4C005C070427318533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1845631C2CFEB5E81849F5 /* LANScreenShared */;
+			targetProxy = C64FCF249CE8B535D7C61EC2 /* PBXContainerItemProxy */;
+		};
+		598FFCC728E21F56432775AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1845631C2CFEB5E81849F5 /* LANScreenShared */;
+			targetProxy = 5B808DF87184A11B0F9270A9 /* PBXContainerItemProxy */;
+		};
+		85F65E2F77A67340B9B0F53D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8DA5ADC82BCC6FA9E1F5F24 /* LANScreenBroadcastExtension */;
+			targetProxy = 2EC93577570D49C64B5B787F /* PBXContainerItemProxy */;
+		};
+		8BD6673B9BFAB246EC742B11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66882CDE4F687DB8B28FB9DD /* LANScreen */;
+			targetProxy = 43A0E8A021C1843502214291 /* PBXContainerItemProxy */;
+		};
+		00D1764F055BCA1A8B48B8A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF1845631C2CFEB5E81849F5 /* LANScreenShared */;
+			targetProxy = 6E5B0EFCBEF6CF519617EE34 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ADBF2A7E925260D30804AD46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Debug;
+		};
+		97EA59459CE2CD2C081B49D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = "1";
+			};
+			name = Release;
+		};
+		E6D28C5582F905B9CE8115C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.shared;
+				PRODUCT_MODULE_NAME = LANScreenShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6CD6F7E189C7B4F68FFFAD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.shared;
+				PRODUCT_MODULE_NAME = LANScreenShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A52E945EF20C61471EDFCF36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/BroadcastExtension/LANScreenBroadcastExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				INFOPLIST_FILE = Sources/BroadcastExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8A2B0C11B5E50E5184D127AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Sources/BroadcastExtension/LANScreenBroadcastExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				INFOPLIST_FILE = Sources/BroadcastExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.broadcast;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3E21606D2AAC452B6105ED5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/LANScreen.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Debug;
+		};
+		C4B274D2786A5AFC25B6D908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/LANScreen.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+			};
+			name = Release;
+		};
+		B8213AA6FB679F1E69EB9ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LANScreen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LANScreen";
+			};
+			name = Debug;
+		};
+		D1DD849096AC1A3B49273A6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanscreen.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LANScreen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LANScreen";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B9DAA1375A387B9D21031EF /* Build configuration list for PBXProject LANScreen */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADBF2A7E925260D30804AD46 /* Debug */,
+				97EA59459CE2CD2C081B49D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B3276A452CCB99CCA87B4B0 /* Build configuration list for PBXNativeTarget LANScreenShared */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6D28C5582F905B9CE8115C8 /* Debug */,
+				6CD6F7E189C7B4F68FFFAD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA0A9E66EACAFE536E929D69 /* Build configuration list for PBXNativeTarget LANScreenBroadcastExtension */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A52E945EF20C61471EDFCF36 /* Debug */,
+				8A2B0C11B5E50E5184D127AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		553C36434D2A6B733DDF222A /* Build configuration list for PBXNativeTarget LANScreen */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E21606D2AAC452B6105ED5F /* Debug */,
+				C4B274D2786A5AFC25B6D908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3806F19BDFB234BD1CCE7662 /* Build configuration list for PBXNativeTarget LANScreenTests */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8213AA6FB679F1E69EB9ABC /* Debug */,
+				D1DD849096AC1A3B49273A6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2263059DA38F54B1375A3912 /* XCRemoteSwiftPackageReference "WebRTC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stasel/WebRTC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 158.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51A47F80A9B3C664F2F990C4 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2263059DA38F54B1375A3912 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+		3ABB4C348A9BC47B8DACCD07 /* WebRTC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2263059DA38F54B1375A3912 /* XCRemoteSwiftPackageReference "WebRTC" */;
+			productName = WebRTC;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6BB5E4B0514FD4FDBDE28DB5 /* Project object */;
+}
