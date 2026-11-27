@@ -5,7 +5,7 @@ import VideoToolbox
 
 /// Pure geometry and rotation helpers shared between capture pipeline and unit tests.
 public enum VideoGeometry {
-    /// Computes aspect-preserving even dimensions capped at `maxLongEdge` (minimum 2x2 for H.264).
+    /// Computes aspect-preserving even dimensions capped at maxLongEdge (minimum 2x2 for H.264).
     public static func scaledEvenDimensions(width: Int, height: Int, maxLongEdge: Int) -> (width: Int, height: Int) {
         guard width > 0, height > 0, maxLongEdge >= 2 else {
             return (max(2, makeEven(width)), max(2, makeEven(height)))
@@ -22,7 +22,7 @@ public enum VideoGeometry {
         return (max(2, scaledW), max(2, scaledH))
     }
 
-    /// Maps an EXIF / ReplayKit `CGImagePropertyOrientation` raw value to rotation degrees (0, 90, 180, 270).
+    /// Maps an EXIF / ReplayKit CGImagePropertyOrientation raw value to rotation degrees (0, 90, 180, 270).
     public static func rotationDegrees(forOrientationRawValue rawValue: UInt32?) -> Int {
         guard let rawValue, let orientation = CGImagePropertyOrientation(rawValue: rawValue) else {
             return 0
@@ -70,7 +70,7 @@ public final class FrameRateLimiter {
     }
 }
 
-/// Hardware-accelerated `VTPixelTransferSession` + tiny `CVPixelBufferPool` resizer.
+/// Hardware-accelerated VTPixelTransferSession + tiny CVPixelBufferPool resizer.
 /// Keeps peak memory minimal inside ReplayKit's ~50 MB Broadcast Upload Extension sandbox.
 public final class PixelBufferResizer {
     private var transferSession: VTPixelTransferSession?
@@ -86,7 +86,7 @@ public final class PixelBufferResizer {
             VTSessionSetProperty(
                 created,
                 key: kVTPixelTransferPropertyKey_ScalingMode,
-                value: kVTPixelTransferScalingMode_Normal
+                value: "Normal" as CFString
             )
             self.transferSession = created
         }
@@ -98,7 +98,7 @@ public final class PixelBufferResizer {
         }
     }
 
-    /// Downscales `sourceBuffer` to fit `maxLongEdge` if larger, returning the original buffer when already within bounds.
+    /// Downscales sourceBuffer to fit maxLongEdge if larger, returning the original buffer when already within bounds.
     public func resizeIfNeeded(_ sourceBuffer: CVPixelBuffer, maxLongEdge: Int) -> CVPixelBuffer {
         let sourceWidth = CVPixelBufferGetWidth(sourceBuffer)
         let sourceHeight = CVPixelBufferGetHeight(sourceBuffer)
